@@ -35,7 +35,7 @@ nav {
     }
 
     .to-left {
-        width: 45%;
+        width: 35%;
 
         ul {
             @include flex-elements;
@@ -380,6 +380,18 @@ footer {
     display: none;
     padding: 20px;
 
+    .f {
+        font-size: 1.5em;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        transition: all 400ms ease;
+
+        &:hover {
+            color: white;
+        }
+    }
+
     .cl {
         position: absolute;
         color: white;
@@ -394,69 +406,70 @@ footer {
         }
     }
 
-    form {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background: white;
-        width: 500px;
-        color: black;
-        height: 400px;
-        border-radius: 10px;
-        padding: 10px;
-        position: relative;
+    // form {
+    //     display: flex;
+    //     align-items: center;
+    //     flex-direction: column;
+    //     background: white;
+    //     width: 500px;
+    //     color: black;
+    //     height: 400px;
+    //     border-radius: 10px;
+    //     padding: 10px;
+    //     position: relative;
 
 
-        .inner {
-            @include flex-elements-c(column);
+    // .inner {
+    //     @include flex-elements-c(column);
 
-            .span {
-                // background: red;
-                position: absolute;
-                background: red;
-                width: 1.6em;
-                height: 1.6em;
-                top: 8px;
-                right: 17px;
-                color: black;
+    //     .span {
+    //         // background: red;
+    //         position: absolute;
+    //         background: red;
+    //         width: 1.6em;
+    //         height: 1.6em;
+    //         top: 8px;
+    //         right: 17px;
+    //         color: black;
 
-            }
+    //     }
 
 
-            input,
-            .input {
-                width: 250px;
-                height: 30px;
-                margin-top: .7em;
-                border-radius: 5px;
-                border: 1px solid grey;
-                outline: none;
-                padding-left: 1em;
-                font-size: 1.1em;
-                transition: all 500ms ease;
+    //             input,
+    //             .input {
+    //                 width: 250px;
+    //                 height: 30px;
+    //                 margin-top: .7em;
+    //                 border-radius: 5px;
+    //                 border: 1px solid grey;
+    //                 outline: none;
+    //                 padding-left: 1em;
+    //                 font-size: 1.1em;
+    //                 transition: all 500ms ease;
 
-                &:focus {
-                    border: 1px solid rgb(66, 66, 248);
-                    box-shadow: 1px 1px rgb(166, 166, 241), -1px -1px rgb(165, 165, 243);
-                }
-            }
+    //                 &:focus {
+    //                     border: 1px solid rgb(66, 66, 248);
+    //                     box-shadow: 1px 1px rgb(166, 166, 241), -1px -1px rgb(165, 165, 243);
+    //                 }
+    //             }
 
-            #submit {
-                background: blue;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                padding-left: 0px;
-                cursor: pointer;
-            }
+    //             #submit {
+    //                 background: blue;
+    //                 display: flex;
+    //                 justify-content: center;
+    //                 align-items: center;
+    //                 color: white;
+    //                 padding-left: 0px;
+    //                 cursor: pointer;
+    //             }
 
-            #pic {
-                border: none;
-                padding-left: 0px;
-            }
+    //             #pic {
+    //                 border: none;
+    //                 padding-left: 0px;
+    //             }
 
-        }
-    }
+    //         }
+    //     }
 
+    // 
 }

@@ -10,12 +10,13 @@ function OpenForm() {
     form.style.display = "flex"; 
 }
 
-function close(){
-    var form = document.getElementsByClassName('join-f');
-    form.style.display = "none";
-}
-
 // ACTIVITIES
+
+function close(which) {
+    let form = document.getElementById(`${which}`);
+    form.style.display = "none";
+
+}
 
 function report(){
     let rep = document.getElementById("report");

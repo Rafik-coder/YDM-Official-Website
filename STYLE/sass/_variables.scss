@@ -23,7 +23,11 @@
         padding: 20px;
         display: none;
 
+        iframe::-webkit-scrollbar {
+            width: 1px;
+        }
     }
+
 
     .f {
         position: absolute;
