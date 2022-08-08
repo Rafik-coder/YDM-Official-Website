@@ -1,0 +1,84 @@
+@import "./colors";
+@import "./variables";
+@import "./style.scss";
+
+
+body {
+    background: rgb(235, 226, 226);
+}
+
+nav {
+    @include flex-elements;
+    width: 100%
+}
+
+.container {
+    @include flex-elements-c(column);
+    width: 100%;
+    height: 100%;
+}
+
+.quizzie,
+.prob-lib,
+.invent-corner {
+    width: 70%;
+    height: 400px;
+    background: rgb(243, 235, 235);
+    margin-top: 2em;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    // border: 1px solid grey
+    cursor: pointer;
+    transition: all 750ms ease;
+
+
+    &:hover {
+        box-shadow: .5px .5px 10px rgba($color: #000000, $alpha: .10), -.5px -.5px 10px grey;
+    }
+}
+
+// .quizzie {}
+
+@include overlay();
+
+.q-cot,
+.vent-cot {
+    @include flex-elements-c(column);
+
+}
+
+
+.sub {
+    @include flex-elements-c(column);
+    width: 140px;
+    height: 50px;
+    background: blue;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 500ms ease;
+
+    &:hover {
+        background: rgb(84, 84, 241);
+    }
+}
+
+.text {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    max-width: 700px;
+    margin-top: 1em;
+}
+
+.l {
+    color: rgb(75, 58, 58);
+    cursor: pointer;
+    transition: all 700ms ease;
+
+    &:hover {
+        color: rgb(185, 174, 174);
+    }
+}
