@@ -19,8 +19,8 @@
                 </div>
                 <div class="to-left">
                     <ul class="f">
-                        <li><a href="">Our Intersts</a></li>
-                        <li><a href="">Contact Us</a></li>
+                        <li>Our Intersts</li>
+                        <li onclick="show('join-f')">Contact Us</li>
                     </ul>
                 </div>
             </nav>
@@ -201,25 +201,9 @@
     </div>
 </body>
 <footer>
-    <div class="join-f" id="join-f">
-        <i class="fa fa-close f"></i>
+    <div class="join-f hide" id="join-f" onclick="hide('join-f')">
+        <i class="fa fa-close f" onclick="hide('join-f')"></i>
         <iframe class="airtable-embed" src="https://airtable.com/embed/shr6y9xodPKdC3Pih?backgroundColor=purple" frameborder="0" onmousewheel="" width="80%" height="533" style="background: white; border: 1px solid #ccc;"></iframe>
-
-        <!-- <form action="">
-            <h2>Please Enter Your Details</h2>
-            <div class="inner"> -->
-                <!-- <div class="span"><i class="fa fa-close cl" onclick="close()"></i></div>
-                <label for="name"><input type="text" id="name" placeholder="Name"></label>
-                <label for="email"><input type="text" id="email" placeholder="Email"></label>
-                <label for="phone"><input type="text" id="phone" placeholder="Phone"></label>
-                <label for="school"><input type="text" id="school" placeholder="Current School"></label>
-                <label for="region"><input type="text" id="region" placeholder="Region"></label>
-                <label for="town"><input type="text" id="town" placeholder="City"></label>
-                <label for="pic"><input type="text" id="interest" placeholder="What are Your Interests"></label>
-                <label for="pic"><input type="file" id="pic" placeholder="Name"></label>
-                <div class="input" id="submit" onclick="submit()">Join</div> -->
-            <!-- </div>
-        </form> -->
     </div>
     <div class="moto">
         <i><h3>OUR MOTTO</h3></i>
@@ -230,7 +214,7 @@
         <p style="color: rgb(216, 216, 162);margin-top: .5em">Join this movement and learn new things!</p>
 
 
-        <div class="join" onclick="OpenForm()">
+        <div class="join" onclick="show('join-f')">
             <p><a>Join Us Today <i class="fa fa-user-circle"></i></a></p>
         </div>
     </div>
