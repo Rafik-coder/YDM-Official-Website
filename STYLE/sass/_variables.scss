@@ -7,6 +7,8 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
+@mixin mobile-view {}
+
 
 @mixin overlay($alpha: .5) {
     .overlay-container {
@@ -21,11 +23,21 @@
         left: 0;
         transition: all 400ms ease;
         padding: 20px;
-        display: none;
+        cursor: pointer;
+        // display: none;
 
-        iframe::-webkit-scrollbar {
-            width: 1px;
-        }
+        // iframe::-webkit-scrollbar {
+        //     width: 1px;
+        // }
+
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: flex;
     }
 
 
@@ -36,9 +48,14 @@
         font-size: 2em;
         cursor: pointer;
         transition: all 400ms ease;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
 
         &:hover {
-            color: rgb(230, 225, 225);
+            // color: rgb(230, 225, 225);
+            background: gray;
+            color: rgb(247, 242, 242);
         }
     }
 

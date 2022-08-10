@@ -2,8 +2,8 @@
 @import './variables';
 
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     padding-left: 25px;
     padding-right: 25px;
     background: rgb(235, 226, 226);
@@ -114,24 +114,42 @@ nav {
 
 }
 
+.about {
+    @include flex-elements-c(column);
+
+}
+
 .content-2 {
     @include flex-elements-c(column);
-    max-width: 865px;
+    width: 90%;
     // background: green;
+
+
+    .logo2 {
+        @include flex-elements-c(column);
+        width: 70%;
+
+        .logo-pic {
+            width: 100%;
+        }
+    }
 
 
 }
 
 .about-us {
+    // @include flex-elements-c(column);
     margin-top: 2em;
+    width: 70%;
 
     h3 {
         margin-top: 1em;
         margin-bottom: .5em;
     }
 
+
     .fmove {
-        width: 860px;
+        width: 100%;
 
     }
 }
@@ -139,7 +157,9 @@ nav {
 
 
 .interests {
+    @include flex-elements-c(column);
     margin-top: 2em;
+    width: 70%;
 
     .turtle {
         @include flex-elements;
@@ -177,7 +197,7 @@ nav {
         li {
             text-align: center;
             @include flex-elements;
-            max-width: 650px;
+            max-width: 80%;
 
             img {
                 width: 150px;
@@ -195,22 +215,49 @@ nav {
 }
 
 .img-contain {
-    width: 870px;
+    @include flex-elements-c(column);
+    width: 100%;
     height: 470px;
     overflow: hidden;
     display: flex;
     position: relative;
     margin-bottom: 1em;
 
-    .contain-img {
+    & .contain-img {
         display: flex;
+        // width: inherit;
+        // background: red;
     }
 
-    .main-img {
-        width: 870px;
+    & img {
+        // display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
         height: 470px;
         margin-bottom: 1em;
-        animation: slide 16s infinite;
+        animation: slide 15s infinite;
+
+        &:nth-child(1) {
+            animation-delay: 16s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 9s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: 12s;
+        }
     }
 
     @keyframes slide {
@@ -255,10 +302,14 @@ nav {
 
 
 .electronics {
+    width: 100%;
+    // background: red;
+
     img {
         margin-left: 0;
         margin-top: 1em;
         margin-bottom: 1em;
+        // width: 100%;
     }
 }
 
@@ -472,4 +523,100 @@ footer {
     //     }
 
     // 
+}
+
+
+// ##### MOBILE VIEW ##############
+
+@media (max-width: 600px) {
+
+    .f {
+
+        li {
+            &:first-of-type {
+                display: none;
+            }
+
+        }
+
+    }
+
+    .interests,
+    .about,
+    .about-us {
+        width: 100%;
+    }
+
+    .content-2,
+    .content {
+        width: 100%;
+    }
+
+    .logo2 {
+        @include flex-elements-c(column);
+        width: 100% !important;
+
+
+        .he {
+            font-size: 1.4em;
+        }
+
+        .logo-pic {
+            width: 100%;
+        }
+    }
+
+    .img-contain {
+        width: 500px;
+
+        .contain-img {
+            width: 70%;
+            height: 300px;
+
+            .main-img {
+                width: 100% !important;
+                height: 100%;
+            }
+        }
+    }
+
+
+    .electronics {
+        width: 100%;
+
+        .img-contain {
+            width: 100%;
+            height: 300px;
+        }
+    }
+}
+
+// ######## TABLET ###########
+
+@media (max-width: 760px) {
+
+    .interests,
+    .about,
+    .about-us {
+        width: 100%;
+    }
+
+    .content-2,
+    .content {
+        width: 100%;
+    }
+
+
+    .img-contain {
+        height: 300px;
+
+        .contain-img {
+            width: 85%;
+
+            .main-img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 }

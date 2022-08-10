@@ -27,10 +27,10 @@
                 </ul>
             </div>
             <div class="left">
-                <li class="l"><div onclick="contact()">Contact Us</div></li>
+                <li class="l"><div onclick="show('contact')">Contact Us</div></li>
             </div>
-            <div class="overlay-container" id="contact">
-                <a href="../HTML/activities.html"><i class="fa fa-close f"></i></a>
+            <div class="overlay-container hide" id="contact" onclick="hide('contact')">
+                <i class="fa fa-close f" onclick="hide('contact')"></i>
                 <i style="color: white;margin-bottom: 1em" class="f-warn">
                         <span>press outside the form to close...</span> <br>
                         Depending on your internet conection, the form might delay..
@@ -50,11 +50,11 @@
                 <ul>
                     <li></li>
                 </ul>
-                <div class="sub" onclick="quiz()">
+                <div class="sub" onclick="show('quiz')">
                     Solve A Quizzie
                 </div>
-                <div class="overlay-container" id="quiz" onclick="close('quiz')">
-                    <a href="../HTML/activities.html"><i class="fa fa-close f"></i></a>
+                <div class="overlay-container hide" id="quiz" onclick="hide('quiz')">
+                    <i class="fa fa-close f"></i>
                     <i style="color: white;margin-bottom: 1em" class="f-warn">
                         <span>press outside the form to close...</span> <br>
                         Depending on your internet conection, the form might delay..
@@ -71,11 +71,11 @@
                     they encounter in their Societies. So that We can come together
                     to find lasting solutions to them using Technology.
                 </p>
-                <div class="sub" onclick="report()">
+                <div class="sub" onclick="show('report')">
                     Report A Problem
                 </div>
-                <div class="overlay-container" id="report" onclick="close('report')">
-                    <a href="../HTML/activities.html"><i class="fa fa-close f"></i></a>
+                <div class="overlay-container hide" id="report" onclick="hide('report')">
+                    <i class="fa fa-close f"></i>
                     <i style="color: white;margin-bottom: 1em" class="f-warn">
                         <span>press outside the form to close...</span> <br>
                         Depending on your internet conection, the form might delay..
@@ -94,10 +94,10 @@
                     <br>
                     And Remember, Ideas shape the World!!
                 </p>
-                <div class="sub" onclick="invent()">
+                <div class="sub" onclick="show('invent')">
                     Share Your Idea
                 </div>
-                <div class="overlay-container out" id="invent" onclick="close('invent')">
+                <div class="overlay-container out hide" id="invent" onclick="hide('invent')">
                     <a href="../HTML/activities.html"><i class="fa fa-close f"></i></a>
                     <i style="color: white;margin-bottom: 1em" class="f-warn">
                         <span>press outside the form to close...</span> <br>

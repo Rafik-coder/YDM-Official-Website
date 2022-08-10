@@ -136,17 +136,48 @@ nav {
 // }
 
 .f-warn {
-    background: rgba($color: #000000, $alpha: .70);
+    background: rgba($color: #201e1e, $alpha: .90);
     height: 90px;
-    width: 50%;
+    // width: 50%;
     @include flex-elements-c(column);
+    padding: 20px;
+    max-width: 350px;
 
     span {
-        color: blue;
-        display: none;
+        color: rgb(172, 172, 197);
+        // display: none;
     }
 }
 
 .invent-corner {
     margin-bottom: 2em;
+}
+
+.none {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+// ######### MOBILE VIEW ##############
+
+@media (max-width: 600px) {
+    .middle {
+        display: none;
+
+        ul {
+            // display: none;
+        }
+    }
+
+    body {
+        // background: black;
+    }
+
+    .quizzie,
+    .prob-lib,
+    .invent-corner {
+        width: 85%;
+    }
 }
